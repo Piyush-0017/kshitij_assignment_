@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  /*background:linear-gradient( rgba(75, 141, 188, 0.8), rgba(240, 77, 172, 0.8));*/
+  
+  font-family: inter;
+background-image: linear-gradient( rgba(205, 118, 234, 0.8), rgba(6, 7, 12, 0.8)), url("pic.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  
+  
+}
+
+#header, nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 60px;
+  transition: color 0.12s, transform 0.12s;
+}
+
+nav .active {
+  color: #e3d272;
+}
+
+.item:hover {
+  color: #e3d272;
+}
+
+.item:active {
+  transform: scale(1.1);
+}
+
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0 80px;
+  color: #cc00ff;
+}
+
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+  z-index: 1;
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 25px 0;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0e07ed;
+  padding-bottom: 40px;
+}
+
+p {
+  font-size:medium ;
+  color: rgba(255, 230, 0, 0.707);
+  line-height: 1.5;
+  padding-bottom: 50px;
+}
+
+li{
+    line-height: normal;
+    font-size: 1.2rem;
+    gap: 20px;
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundZoom {
+  from{
+    background-size: 80%;
+  }
+  to{
+    background-size: 100%;
+  }
+}
+
+
+
+
+
+h1 {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+h3 {
+  animation: fadeIn 1.4s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+p {
+  animation: fadeIn 1.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+body {
+  animation: backgroundZoom 3s ease-in forwards;
+}
